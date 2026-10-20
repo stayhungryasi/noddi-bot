@@ -39,7 +39,9 @@ jobs:
         run: |
           git config user.name "noddi-bot"
           git config user.email "noddi-bot@users.noreply.github.com"
-          git add state.json archive 2>/dev/null || true
+          [ -f state.json ] && git add state.json
+          [ -d archive ] && git add archive
+          true
           if ! git diff --cached --quiet; then
             git commit -m "noddi: state $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase --autostash || true
