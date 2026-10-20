@@ -1,0 +1,10 @@
+{
+ "seen": {
+  "kospi": [5617382, 5622034],
+  "bitcoins_new1": []
+ },
+ "fails": 0,
+ "alerted": false,
+ "started": true,
+ "last_ok_date": "2026-10-20"
+}
